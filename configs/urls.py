@@ -5,12 +5,13 @@ from ONW.groupsManager import views as groupsManagerViews
 
 urlpatterns = [
     path('hosts/' ,hostsManagerViews.list),
-    path('host/add/<int:ID>' ,hostsManagerViews.add),
+    path('host/add' ,hostsManagerViews.add),
+    path('host/view/<int:ID>' ,hostsManagerViews.view),
     path('host/edit/<int:ID>' ,hostsManagerViews.edit),
     path('host/delete/<int:ID>' ,hostsManagerViews.delete),
 
     path('groups/',groupsManagerViews.list),
-    path('group/add/<int:ID>',groupsManagerViews.add),
+    path('group/add/',groupsManagerViews.add),
     path('group/edit/<int:ID>',groupsManagerViews.edit),
     path('group/delete/<int:ID>',groupsManagerViews.delete),
 
