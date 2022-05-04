@@ -53,6 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ONW-settings.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

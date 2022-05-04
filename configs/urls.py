@@ -11,9 +11,15 @@ urlpatterns = [
     path('host/delete/<int:ID>' ,hostsManagerViews.delete),
 
     path('groups/',groupsManagerViews.list),
-    path('group/add/',groupsManagerViews.add),
+    path('group/add',groupsManagerViews.add),
+    path('group/view/<int:ID>' ,groupsManagerViews.view),
     path('group/edit/<int:ID>',groupsManagerViews.edit),
     path('group/delete/<int:ID>',groupsManagerViews.delete),
+
+
+
+
+
 
     # path('tasks/'),
     # path('task/get/<int:ID:>'),
