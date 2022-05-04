@@ -1,16 +1,5 @@
+from tokenize import group
 from django.db import models
-
-
-class hosts(models.Model):
-    app_id = models.CharField(max_length=50, blank=False, null=False)
-    hostname = models.CharField(max_length=50)
-    ip = models.CharField(max_length=50)
-    desc = models.CharField(max_length=50)
-    create_time = models.DateTimeField(auto_now_add=True)
-    update_time = models.DateTimeField(auto_now=True)
-
-    # def __str__(self):
-    #     return self.hostname
 
 class groups(models.Model):
     app_id = models.CharField(max_length=50, blank=False, null=False)
@@ -21,6 +10,19 @@ class groups(models.Model):
 
     def __str__(self):
         return self.name
+
+class hosts(models.Model):
+    app_id = models.CharField(max_length=50, blank=False, null=False)
+    hostname = models.CharField(max_length=50)
+    ip = models.CharField(max_length=50)
+    desc = models.CharField(max_length=50)
+    group = models.ForeignKey(groups,on_delete=models.RESTRICT)
+    create_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField(auto_now=True)
+
+    # def __str__(self):
+    #     return self.hostname
+
 
 
 class network_events(models.Model):
