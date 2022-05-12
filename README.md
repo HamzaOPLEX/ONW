@@ -2,5 +2,5 @@ OPLEX NETWORK WATCHER (ONW)
 
 - Currently : 
   - working on the backend rest api
-- next set :
+- next step :
   - using react.js in fontend 
