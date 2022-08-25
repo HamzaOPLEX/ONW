@@ -8,7 +8,7 @@ def start():
     scheduler = BackgroundScheduler()
     scheduler.add_jobstore(DjangoJobStore(), 'djangojobstore',verbose=False)
     register_events(scheduler)
-    @scheduler.scheduled_job("cron",second='*/',name='auto_Ping')
+    @scheduler.scheduled_job("cron",second='30',name='auto_Ping')
     def auto_Ping():
         Ping()
     scheduler.start()
