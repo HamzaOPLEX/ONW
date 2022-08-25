@@ -9,3 +9,4 @@ class ONWappConfig(AppConfig):
         if settings.SCHEDULER_DEFAULT:
             from configs import operator 
             operator.start()
+            
