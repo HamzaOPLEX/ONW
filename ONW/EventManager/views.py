@@ -10,8 +10,8 @@ from functions.data_validations import *
 @api_view(['POST'])
 def add(request):
     if request.method == 'POST':
-        date = request.POST.get('date') # ping every date
-        end_date = request.POST.get('end')
+        hostname = request.POST.get('hostname')
+        ip = request.POST.get('ip')
         desc = request.POST.get('desc')
         group = get_object_or_404(groups,id=request.POST.get('group'))
         host = hosts(hostname=hostname,ip=ip,desc=desc,group=group)
